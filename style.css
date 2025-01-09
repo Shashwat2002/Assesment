@@ -1,0 +1,289 @@
+/* Global Styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+
+body {
+  background-color: #FDF7E2;
+  color: #333333;
+  line-height: 1.6;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1rem;
+}
+
+/* Header */
+.header {
+  background-color: #fff;
+  padding: 1rem 0;
+  border-bottom: 1px solid #e5e5e5;
+}
+
+.header .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #333333;
+}
+
+.nav-links {
+  display: flex;
+  gap: 1.5rem;
+}
+
+.nav-links a {
+  color: #333333;
+  text-decoration: none;
+  font-weight: 500;
+  transition: color 0.3s;
+}
+
+.nav-links a:hover {
+  color: #E5C067;
+}
+
+.cart-icon img {
+  width: 30px;
+}
+
+/* Hero Section */
+.hero {
+  background-color: #FCEECB;
+  text-align: center;
+  padding: 2rem 0;
+}
+
+.hero h1 {
+  font-size: 2rem;
+  font-weight: 700;
+  color: #333333;
+}
+
+.hero p {
+  font-size: 1rem;
+  color: #666666;
+}
+
+/* Cart Section */
+.cart-container {
+  display: flex;
+  gap: 2rem;
+  padding: 2rem 1rem;
+  flex-wrap: wrap;
+}
+
+.cart-items {
+  flex: 2;
+  background-color: #fff;
+  padding: 1.5rem;
+  border-radius: 10px;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+  overflow-x: auto;
+}
+
+.cart-items table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.cart-items table th,
+.cart-items table td {
+  text-align: left;
+  padding: 1rem;
+}
+
+.cart-items table th {
+  background-color: #FCEECB;
+  color: #333333;
+  font-weight: 600;
+}
+
+.cart-items table td img {
+  max-width: 100px;
+  width: 100%;
+  height: auto;
+  border-radius: 5px;
+}
+
+.cart-items table td {
+  vertical-align: middle;
+}
+
+.cart-summary {
+  flex: 1;
+  background-color: #fff;
+  padding: 1.5rem;
+  border-radius: 10px;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.cart-summary h2 {
+  font-size: 1.5rem;
+  font-weight: 600;
+  margin-bottom: 1rem;
+}
+
+.totals p {
+  font-size: 1rem;
+  margin-bottom: 1rem;
+  font-weight: 500;
+}
+
+.checkout-btn {
+  display: block;
+  width: 100%;
+  padding: 1rem;
+  background-color: #E5C067;
+  color: #fff;
+  font-size: 1rem;
+  font-weight: bold;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.checkout-btn:hover {
+  background-color: #D4B259;
+}
+
+/* Footer */
+.footer {
+  background-color: #FAFAFA;
+  text-align: center;
+  padding: 2rem 0;
+}
+
+.footer-icons {
+  display: flex;
+  justify-content: space-around;
+  margin-bottom: 1rem;
+}
+
+.footer-icons div {
+  text-align: center;
+}
+
+.footer-icons img {
+  width: 30px;
+  margin-bottom: 0.5rem;
+}
+
+.footer-icons p {
+  font-size: 0.9rem;
+  color: #666666;
+}
+
+.footer p {
+  font-size: 0.8rem;
+  color: #999999;
+}
+
+/* Responsive Design */
+/* Tablet View */
+@media (max-width: 1024px) {
+  .cart-container {
+    flex-direction: column;
+  }
+
+  .cart-summary {
+    margin-top: 2rem;
+  }
+
+  .hero h1 {
+    font-size: 1.8rem;
+  }
+
+  .cart-items table th,
+  .cart-items table td {
+    padding: 0.8rem;
+  }
+}
+
+/* Mobile View */
+@media (max-width: 768px) {
+  .header .container {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .nav-links {
+    display: none;
+  }
+
+  .hero h1 {
+    font-size: 1.5rem;
+  }
+
+  .hero p {
+    font-size: 0.9rem;
+  }
+
+  .cart-container {
+    padding: 1rem;
+  }
+
+  .cart-summary {
+    padding: 1rem;
+  }
+
+  .checkout-btn {
+    font-size: 0.9rem;
+  }
+}
+
+/* Smaller Mobile Screens */
+@media (max-width: 480px) {
+  .hero {
+    padding: 1.5rem 0;
+  }
+
+  .hero h1 {
+    font-size: 1.2rem;
+  }
+
+  .hero p {
+    font-size: 0.8rem;
+  }
+
+  .cart-container {
+    padding: 1rem 0.5rem;
+  }
+
+  .cart-summary {
+    padding: 1rem;
+  }
+
+  .checkout-btn {
+    padding: 0.8rem;
+    font-size: 0.8rem;
+  }
+
+  .cart-items table td img {
+    max-width: 80px;
+  }
+
+  .footer-icons {
+    flex-direction: column;
+    gap: 1rem;
+  }
+
+  .footer-icons img {
+    width: 24px;
+  }
+
+  .footer-icons p {
+    font-size: 0.8rem;
+  }
+}
